@@ -1,6 +1,6 @@
 # Tutorials
 
-Here you can find some tutorials:
+Heere you can find some tutorials:
 
 | Folder | Scope                  | DBMS       |
 | ---    | ---                    | ---        |
