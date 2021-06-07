@@ -1,4 +1,4 @@
-# Mid-term Project
+# Mid-term Project!
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" width="100">
 
