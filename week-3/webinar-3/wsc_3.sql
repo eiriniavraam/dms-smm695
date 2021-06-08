@@ -40,14 +40,14 @@ CREATE TABLE artworks (
     url text);
 
 -- This will rise an error:
-\copy artworks FROM '/YOUR/PATH/TO/artwork_data.csv' DELIMITER ',' CSV HEADER;
+copy artworks FROM '/tmp/artworkRandomSample.csv' DELIMITER ',' CSV HEADER;
 
 -- Mixed data type can create problems, let's use text for the column year:
 ALTER TABLE artworks ALTER COLUMN year SET DATA TYPE text;
 
 \d artworks
 
-\copy artworks FROM '/YOUR/PATH/TO/artwork_data.csv' DELIMITER ',' CSV HEADER;
+\copy artworks FROM '/tmp/artworkRandomSample.csv' DELIMITER ',' CSV HEADER;
 
 -- Let's clean the year column:
 SELECT DISTINCT year FROM artworks ORDER BY year DESC;
@@ -147,6 +147,7 @@ SELECT * FROM artists WHERE title_name IS NOT NULL;
 
 
 -- Create a table for artists' roles:
+-- removing reduntant roles and having serial column to show how many times it appears
 CREATE TABLE roles AS SELECT DISTINCT artistRole FROM artworks ORDER BY artistRole;
 
 ALTER TABLE roles ADD COLUMN role_id serial;
